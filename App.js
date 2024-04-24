@@ -1,11 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.visual}> 
+      <Image
+        source ={require('./Image/buxa.png')}
+        style={{width:210,height:210, borderRadius:100,}}
+      />
+      </View>
+      <Text style={ styles.texto}>Gas Guardian</Text>
+      <StatusBar/>
     </View>
   );
 }
@@ -13,8 +18,24 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#080744',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
+  visual:{
+    height: 250,
+    width: 250,
+    backgroundColor:'#0C88FC',
+    justifyContent:'center',
+    alignItems:'center',
+    borderRadius:200,
+  },
+  texto:{
+    marginTop:20,
+    fontSize:25,
+    color: '#fff',
+    
+  }
+
 });
